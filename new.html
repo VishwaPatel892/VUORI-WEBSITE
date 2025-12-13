@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Collection</title>
+    <style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+ .navbar {
+      width: 100%;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 10px;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a.active {
+      color: #c0392b;
+    }
+
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .search-box {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 5px 8px;
+      outline: none;
+    }
+
+    .icon {
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+body {
+  background: #fff;
+  color: #222;
+  padding: 30px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.collection-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.product-card {
+  text-align: left;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.colors {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  gap: 6px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #888;
+  cursor: pointer;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+.color {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+
+
+
+/* FOOTER */
+footer {
+  background: #f7f7f7;
+  padding: 50px 8%;
+  font-family: Georgia, serif;
+  color: #333;
+}
+
+.newsletter h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.input-box {
+  display: flex;
+  width: 340px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+  margin: 15px 0 30px;
+}
+
+.input-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 15px;
+}
+
+.input-box button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.socials a {
+  margin-right: 18px;
+  font-size: 20px;
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.footer-links .col h4 {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.footer-links .col a {
+  display: block;
+  font-size: 15px;
+  margin: 7px 0;
+  text-decoration: none;
+  color: #444;
+}
+
+.footer-links .col a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+
+</style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">vuori</div>
+      <nav class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./womens.html">Women</a>
+        <a href="./mens.html">Men</a>
+        <a href="./new.html">New</a>
+        <a href="#">Gifting</a>
+        <a href="#">Explore</a>
+      </nav>
+      <div class="nav-icons">
+        <input type="text" placeholder="Search Vuori" class="search-box" />
+        <i class="icon user">&#128100;</i>
+        <i class="icon bag">&#128717;</i>
+      </div>
+    </div>
+  </header>
+
+
+<header>
+    <h2>All new</h2>
+</header>
+
+<div class="collection-container">
+
+    <!-- Product Card -->
+    <div class="product-card">
+        <img src="https://cdn.shopify.com/s/files/1/0022/4008/6074/files/FA25_LOOK127_W_AARON_FEAVER_SOHO_00111.jpg?v=1761085879&width=1000&height=1250&crop=center" alt="Product">
+        
+        <div class="colors">
+            <span class="dot" style="background:#000;"></span>
+            <span class="dot" style="background:#4C4F46;"></span>
+            <span class="dot" style="background:#8C8C8C;"></span>
+            <span class="dot" style="background:#BBA98E;"></span>
+        </div>
+
+        <p class="title">Restore Straight Leg Sweatpant </p>
+        <p class="color">Evergreen </p>
+        <p class="price">$118</p>
+    </div>
+
+    <!-- Copy/Paste more cards -->
+    <div class="product-card">
+        <img src="https://cdn.shopify.com/s/files/1/0022/4008/6074/files/V126HTY_FA24_M_ECOMM_TOPS_FRONT_6.jpg?v=1743124981&width=600&height=750&crop=center" alt="Product">
+        
+        <div class="colors">
+            <span class="dot" style="background:#000;"></span>
+            <span class="dot" style="background:#556064;"></span>
+            <span class="dot" style="background:#2A2F3C;"></span>
+            <span class="dot" style="background:#C0B9AE;"></span>
+        </div>
+
+        <p class="title">Strato Tech Tee</p>
+        <p class="color">Black Heather</p>
+        <p class="price">$58</p>
+    </div>
+
+
+        <div class="product-card">
+        <img src="https://cdn.shopify.com/s/files/1/0022/4008/6074/files/VW5077DSA_FA25_W_OUTERWEAR_FRONT_4.jpg?v=1761588560&width=1000&height=1250&crop=center" alt="Product">
+        
+        <div class="colors">
+            <span class="dot" style="background:#000;"></span>
+            <span class="dot" style="background:#4C4F46;"></span>
+            <span class="dot" style="background:#8C8C8C;"></span>
+            <span class="dot" style="background:#BBA98E;"></span>
+        </div>
+
+        <p class="title">Carmel Corduroy Puffer</p>
+        <p class="color">Dark Salt</p>
+        <p class="price">$228</p>
+    </div>
+
+
+
+        <div class="product-card">
+        <img src="https://cdn.shopify.com/s/files/1/0022/4008/6074/files/VW5049MKW_FA25_W_OUTERWEAR_FULL_6.jpg?v=1762184345&width=600&height=750&crop=center" alt="Product">
+        
+        <div class="colors">
+            
+            <span class="dot" style="background:#4C4F46;"></span>
+            <span class="dot" style="background:#8C8C8C;"></span>
+           
+        </div>
+
+        <p class="title">Drift Insulated Jacket</p>
+        <p class="color">Milkweed</p>
+        <p class="price">$198</p>
+    </div>
+
+
+        <div class="product-card">
+        <img src="https://cdn.shopify.com/s/files/1/0022/4008/6074/files/FA25_LOOK124_W_MARK_TESI_NYC_011925.jpg?v=1761084973&width=600&height=750&crop=center" alt="Product">
+        
+        <div class="colors">
+           <span class="dot" style="background:#8C8C8C;"></span>
+            <span class="dot" style="background:#BBA98E;"></span>
+        </div>
+
+        <p class="title">Granite Half Zip</p>
+        <p class="color">Oatmeal Heather</p>
+        <p class="price">$118</p>
+    </div>
+
+
+
+        <div class="product-card">
+        <img src="https://cdn.shopify.com/s/files/1/0022/4008/6074/files/VW533OLV_FA25_W_OUTERWEAR_FRONT_2.jpg?v=1761239100&width=600&height=750&crop=center" alt="Product">
+        
+        <div class="colors">
+            <span class="dot" style="background:#000;"></span>
+            <span class="dot" style="background:#4C4F46;"></span>
+           
+        </div>
+
+        <p class="title">Canyon Insulated Vest</p>
+        <p class="color">Olive</p>
+        <p class="price">$155</p>
+    </div>
+
+
+    <div class="product-card">
+        <img src="https://cdn.shopify.com/s/files/1/0022/4008/6074/files/V1006HNV_FA24_M_ECOMM_TOPS_FRONT_2.jpg?v=1743124865&width=600&height=750&crop=center" alt="Product">
+
+        <div class="colors">
+            <span class="dot" style="background:#000;"></span>
+            <span class="dot" style="background:#A9A9A9;"></span>
+            <span class="dot" style="background:#3E4A44;"></span>
+        </div>
+
+        <p class="title">Long Sleeve Strato Tech Polo</p>
+        <p class="color">Navy Heather</p>
+        <p class="price">$78</p>
+    </div>
+
+    <div class="product-card">
+        <img src="https://cdn.shopify.com/s/files/1/0022/4008/6074/files/V2050HBK_FA25_M_ECOMM_LAYERS_DETAIL_10.jpg?v=1760480306&width=600&height=750&crop=center" alt="Product">
+
+        <div class="colors">
+            <span class="dot" style="background:#000;"></span>
+           
+        </div>
+
+        <p class="title">Waffle Crew</p>
+        <p class="color">Marshmallow</p>
+        <p class="price">$84</p>
+    </div>
+
+      <div class="product-card">
+        <img src="https://cdn.shopify.com/s/files/1/0022/4008/6074/files/V4007BLK_FA24_M_ECOMM_PANTS_FULL_3.jpg?v=1758747074&width=600&height=750&crop=center">
+        <div class="colors">
+            <span class="dot" style="background:#000;"></span>
+            <span class="dot" style="background:#20464E;"></span>
+            <span class="dot" style="background:#6C8CA0;"></span>
+        </div>
+
+        <p class="title">Seaside Sweatpant - Long</p>
+        <p class="color">Black</p>
+        <p class="price">$178</p>
+    </div>
+
+          <div class="product-card">
+        <img src="https://cdn.shopify.com/s/files/1/0022/4008/6074/files/V2054CVG_FA25_M_LAYERS_FRONT_4.jpg?v=1762190234&width=600&height=750&crop=center">
+        <div class="colors">
+            <span class="dot" style="background:#000;"></span>
+            <span class="dot" style="background:#20464E;"></span>
+            <span class="dot" style="background:#6C8CA0;"></span>
+        </div>
+
+        <p class="title">Seaside Full Zip 2.0</p>
+        <p class="color">Cavern Grey</p>
+        <p class="price">$148</p>
+    </div>
+
+
+
+          <div class="product-card">
+        <img src="https://cdn.shopify.com/s/files/1/0022/4008/6074/files/V1103HEV_FA25_M_TOPS_FRONT_2.jpg?v=1760571535&width=1000&height=1250&crop=center" alt="Product">
+
+        <div class="colors">
+            <span class="dot" style="background:#20464E;"></span>
+            <span class="dot" style="background:#6C8CA0;"></span>
+        </div>
+
+        <p class="title">Long Sleeve Ponto Button Down Shirt</p>
+        <p class="color">Evergreen Heather</p>
+        <p class="price">$108</p>
+    </div>
+
+    
+
+          <div class="product-card">
+        <img src=https://cdn.shopify.com/s/files/1/0022/4008/6074/files/V1057HTP_FA25_M_TOPS_FRONT_2.jpg?v=1760568338&width=800&height=1000&crop=center" alt="Product">
+
+        <div class="colors">
+            <span class="dot" style="background:#000;"></span>
+            <span class="dot" style="background:#20464E;"></span>
+            <span class="dot" style="background:#6C8CA0;"></span>
+            <span class="dot" style="background-color: #4C4F46;"></span>
+            <span class="dot" style="background-color:grey;"></span>
+            <span class="dot" style="background-color: #f1eded"></span>
+            
+       </div>
+
+        <p class="title">Short Sleeve Ponto Performance Tee</p>
+        <p class="color">Spruce Heather</p>
+        <p class="price">$78</p>
+    </div>
+
+</div>
+
+
+
+
+
+
+      <footer>
+     
+  <div class="newsletter">
+      <h2>20% off your first order</h2>
+      <div class="input-box">
+        <input type="email" placeholder="Email Address">
+        <button>→</button>
+      </div>
+
+      <div class="socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+      </div>
+  </div>
+
+
+  <div class="footer-links">
+    <div class="col">
+      <h4>Our Company</h4>
+      <a href="#">About Us</a>
+      <a href="#">Reviews</a>
+      <a href="#">Stories</a>
+      <a href="#">Careers</a>
+      <a href="#">Origin Track</a>
+      <a href="#">Impact Report</a>
+      <a href="#">Press</a>
+      <a href="#">Helping From Home</a>
+    </div>
+
+    <div class="col">
+      <h4>Customer Service</h4>
+      <a href="#">Contact Us</a>
+      <a href="#">Chat with a Specialist</a>
+      <a href="#">Shipping & Return Policy</a>
+      <a href="#">Returns & Exchanges</a>
+      <a href="#">FAQ</a>
+      <a href="#">Laundry Care</a>
+    </div>
+
+    <div class="col">
+      <h4>Resources</h4>
+      <a href="#">Trade Program</a>
+      <a href="#">Curator Program</a>
+      <a href="#">Design Services</a>
+      <a href="#">Wholesale</a>
+      <a href="#">Official Promotional Rules</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Do Not Sell My Info</a>
+    </div>
+
+    <div class="col">
+      <h4>Shop</h4>
+      <a href="#">Store Locations</a>
+      <a href="#">Design Consultations</a>
+      <a href="#">Gift Cards</a>
+      <a href="#">Fabric Swatches</a>
+      <a href="#">Bestsellers</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Terms of Service | Accessibility Statement | Social Media Policy | Cookie Settings</p>
+    <p>© 2025 All Rights Reserved</p>
+  </div>
+  </section>
+</footer>
+
+
+  
+</body>
+</html>

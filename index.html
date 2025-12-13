@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vuori - Clone</title>
+  <style>
+  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+
+    body {
+      color: #222;
+      background-color: #fff;
+    }
+
+   
+    .navbar {
+      width: 100%;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 10px;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a.active {
+      color: #c0392b;
+    }
+
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .search-box {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 5px 8px;
+      outline: none;
+    }
+
+    .icon {
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    /* -------------------- VIDEO HERO -------------------- */
+    .video-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    #bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .video-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      z-index: 1;
+    }
+
+    .video-text h4 {
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .video-text h1 {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+
+    /* -------------------- NEW ARRIVALS -------------------- */
+    .new-arrivals {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 80px 100px;
+      gap: 60px;
+    }
+
+    .text-section {
+      flex: 1;
+    }
+
+    .text-section h2 {
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+
+    .text-section button {
+      display: block;
+      width: 180px;
+      padding: 12px 0;
+      margin-bottom: 15px;
+      font-size: 15px;
+      background-color: white;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .text-section button:hover {
+      background-color: #111;
+      color: white;
+    }
+
+    .products {
+      flex: 3;
+      display: flex;
+      gap: 20px;
+    }
+
+    .product {
+      flex: 1;
+      text-align: left;
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    .product .name {
+      font-size: 15px;
+      color: #333;
+    }
+
+    .product .price {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* -------------------- FEATURED -------------------- */
+    .featured {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 80px 100px;
+    }
+
+    .feature img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .feature h2 {
+      text-align: center;
+      margin-top: 12px;
+      font-weight: 500;
+      font-size: 1.8rem;
+    }
+
+    .feature p {
+      text-align: center;
+      margin-top: 8px;
+      font-size: 1rem;
+    }
+
+   .feature {
+  position: relative;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+.btn h1{
+  color: white;
+  font-size: 2.8rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  
+}
+
+    /* -------------------- HERO -------------------- */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #243a33;
+      color: white;
+      padding: 80px 100px;
+    }
+
+    .hero-text {
+      flex: 1;
+      padding-right: 50px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
+
+    .hero-text p {
+      margin-bottom: 25px;
+      line-height: 1.5;
+      font-size: 1rem;
+    }
+
+    .hero-text button {
+      background: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .hero-img img {
+      width: 480px;
+      border-radius: 8px;
+    }
+
+
+    
+footer {
+  background: #f7f7f7;
+  padding: 50px 8%;
+  font-family: Georgia, serif;
+  color: #333;
+}
+
+.newsletter h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.input-box {
+  display: flex;
+  width: 340px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+  margin: 15px 0 30px;
+}
+
+.input-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 15px;
+}
+
+.input-box button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.socials a {
+  margin-right: 18px;
+  font-size: 20px;
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.footer-links .col h4 {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.footer-links .col a {
+  display: block;
+  font-size: 15px;
+  margin: 7px 0;
+  text-decoration: none;
+  color: #444;
+}
+
+.footer-links .col a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">vuori</div>
+      <nav class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./womens.html">Women</a>
+        <a href="./mens.html">Men</a>
+        <a href="./new.html">New</a>
+        <a href="#">Gifting</a>
+        <a href="#">Explore</a>
+      </nav>
+      <div class="nav-icons">
+        <input type="text" placeholder="Search Vuori" class="search-box" />
+        <i class="icon user">&#128100;</i>
+        <i class="icon bag">&#128717;</i>
+      </div>
+    </div>
+  </header>
+
+  <!-- VIDEO SECTION -->
+  <section class="video-section">
+    <video autoplay muted loop id="bg-video">
+      <source src="https://cdn.bfldr.com/JUZN72U0/at/9zbs2xj4tfnhwsxjppv8wrr/HO25_Drop_05_HP_9x4_V3.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="video-text">
+      <h4>Embrace The Present</h4>
+      <h1>The Holiday Gift Guide</h1>
+    </div>
+  </section>
+
+  <!-- NEW ARRIVALS -->
+  <section class="new-arrivals">
+    <div class="text-section">
+      <h2>New Arrivals</h2>
+      <button>Shop Men's</button>
+      <button>Shop Women's</button>
+    </div>
+
+    <div class="products">
+      <div class="product">
+        <img src="https://cdn.shopify.com/s/files/1/0022/4008/6074/files/FA25_RESTORE_LOOK01_GEORDY_PEARSON_CARLSBAD_2961.jpg?v=1760737093&width=1000&height=1250&crop=center" alt="Restore Oversized Hoodie">
+        <p class="name">Restore Oversized Hoodie</p>
+        <p class="price">$134</p>
+      </div>
+      <div class="product">
+        <img src="https://cdn.shopify.com/s/files/1/0022/4008/6074/files/V302BDK_FA25_M_BOTTOMS_FULL_7_5586f6cf-baca-4935-a766-81883ed475cb.jpg?v=1762536979&width=800&height=1000&crop=center" alt="Kore Short Lined 7">
+        <p class="name">Kore Short Lined 7"</p>
+        <p class="price">$68</p>
+      </div>
+      <div class="product">
+        <img src="https://cdn.shopify.com/s/files/1/0022/4008/6074/files/VW5077DSA_FA25_W_OUTERWEAR_FULL_6.jpg?v=1761588560&width=800&height=1000&crop=center" alt="Carmel Corduroy Puffer">
+        <p class="name">Carmel Corduroy Puffer</p>
+        <p class="price">$228</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED SECTION -->
+  <section class="featured">
+    <div class="feature">
+      <img src="https://cdn.bfldr.com/JUZN72U0/at/sz4cwkpks4b7ppspcbn5m694/1106_womens_mens_Sub_evergreen_Lounge_desktop.png?auto=webp&width=2200&height=2206&crop=center" alt="">
+      <h2>Coast To Coast Comfort</h2>
+      <p>Unwind with our softest lounge essentials.</p>
+    </div>
+    <div class="feature">
+      <img src="https://cdn.bfldr.com/JUZN72U0/at/rpjz6g4c9nc7334scfqk5mqr/1106_Mens_Sub_Coronado_Layers_Desktop.png?auto=webp&width=2200&height=2206&crop=center" alt="">
+      <h2>Cool Weather. Warm Layers.</h2>
+      <p>Conquer the cold with DreamKnit Warm</p>
+    </div>
+  </section>
+
+  <!-- FINAL HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Evergreen, Everywhere.</h1>
+      <p>Leave a lasting impression with our most-loved lounge and fitness styles.</p>
+      <button>Shop Featured In Evergreen</button>
+    </div>
+    <div class="hero-img">
+      <img src="https://cdn.bfldr.com/JUZN72U0/at/bngfnz7mpcjnvk2mhj9vwxph/1106_womens_mens_Sub_evergreen_desktop.png?auto=webp&width=1800&height=1045&crop=center" alt="Evergreen Styles" />
+    </div>
+  </section>
+
+
+
+  <section class="new-arrivals">
+    <div class="text-section">
+      <h2>Recommended For You</h2>
+    </div>
+
+    <div class="products">
+      <div class="product">
+        <img src="https://cdn.shopify.com/s/files/1/0022/4008/6074/files/VW5077DSA_FA25_W_OUTERWEAR_FRONT_4.jpg?v=1761588560&width=1200&height=1500&crop=center" alt="">
+        <p class="name">Caramel Corduroy Puffer</p>
+        <p class="price">$228</p>
+      </div>
+      <div class="product">
+        <img src="https://cdn.shopify.com/s/files/1/0022/4008/6074/files/V302BDK_FA25_M_BOTTOMS_DETAIL_10_2ea86531-5703-4ec5-9700-e3e586b2045f.jpg?v=1762536979&width=1000&height=1250&crop=center" alt="">
+        <p class="name">Kore Short Lined 7"</p>
+        <p class="price">$68</p>
+      </div>
+      <div class="product">
+        <img src="https://cdn.shopify.com/s/files/1/0022/4008/6074/files/VW2002VRO_FA25_W_ECOMM_LAYERS_FRONT_2.jpg?v=1754688160&width=800&height=1000&crop=center" alt="Carmel Corduroy Puffer">
+        <p class="name">Restore Oversized Hoodie</p>
+        <p class="price">$228</p>
+      </div>
+    </div>
+  </section>
+
+
+    <section class="featured">
+    <div class="feature">
+      <img src="https://cdn.bfldr.com/JUZN72U0/at/5tcjt5b9fbvgqtv6fkmkcbj/1106_Mens_5050_New_Desktop.png?auto=webp&width=1800&height=2263&crop=center" alt="">
+<div class="btn">
+  <h1>Men's New</h1>
+  <button>Shop Now</button>
+
+</div>
+    </div>
+    <div class="feature">
+      <img src="https://cdn.bfldr.com/JUZN72U0/at/tnm68wvchn4xrvthb78v3fcs/1106_womens_5050_New_Desktop.png?auto=webp&width=2200&height=2765&crop=center" alt="">
+    <div class="btn">
+      <h1>Woman's New</h1>
+      <button>Shop Now</button>
+    </div> 
+
+    </div>
+  </section>
+
+
+      <footer>
+     
+  <div class="newsletter">
+      <h2>20% off your first order</h2>
+      <div class="input-box">
+        <input type="email" placeholder="Email Address">
+        <button>→</button>
+      </div>
+
+      <div class="socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+      </div>
+  </div>
+
+
+  <div class="footer-links">
+    <div class="col">
+      <h4>Our Company</h4>
+      <a href="#">About Us</a>
+      <a href="#">Reviews</a>
+      <a href="#">Stories</a>
+      <a href="#">Careers</a>
+      <a href="#">Origin Track</a>
+      <a href="#">Impact Report</a>
+      <a href="#">Press</a>
+      <a href="#">Helping From Home</a>
+    </div>
+
+    <div class="col">
+      <h4>Customer Service</h4>
+      <a href="#">Contact Us</a>
+      <a href="#">Chat with a Specialist</a>
+      <a href="#">Shipping & Return Policy</a>
+      <a href="#">Returns & Exchanges</a>
+      <a href="#">FAQ</a>
+      <a href="#">Laundry Care</a>
+    </div>
+
+    <div class="col">
+      <h4>Resources</h4>
+      <a href="#">Trade Program</a>
+      <a href="#">Curator Program</a>
+      <a href="#">Design Services</a>
+      <a href="#">Wholesale</a>
+      <a href="#">Official Promotional Rules</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Do Not Sell My Info</a>
+    </div>
+
+    <div class="col">
+      <h4>Shop</h4>
+      <a href="#">Store Locations</a>
+      <a href="#">Design Consultations</a>
+      <a href="#">Gift Cards</a>
+      <a href="#">Fabric Swatches</a>
+      <a href="#">Bestsellers</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Terms of Service | Accessibility Statement | Social Media Policy | Cookie Settings</p>
+    <p>© 2025 All Rights Reserved</p>
+  </div>
+  </section>
+</footer>
+
+</body>
+</html>

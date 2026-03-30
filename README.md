@@ -9,6 +9,7 @@ This project is a multi-page e-commerce website inspired by Vuori, featuring pro
 https://vuori-clone.netlify.app/
 
 https://youtu.be/ExemXlTx6AM
+
 ---
 
 ## ✨ Features
